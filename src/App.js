@@ -1,25 +1,69 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import './css/main.css';
+import { HomePage, NotFoundPage } from './pages'
+import { posts as patInfo } from './data/data'
+
+
+
+
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      isAppReady: true,
+      data: [
+        ...patInfo
+      ]
+    }
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0, 0);
+    console.log('updated in app j')
+  }
+
+  render() {
+    const { isAppReady, data } = this.state
+    return (
+      <BrowserRouter>
+        <div 
+          //  style={{
+          //   backgroundColor: 'blue',
+          //   height: '100vh',
+          //   width: '100vw',
+          // }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <Switch>
+            <Route exact path="/" render={() => {
+              return <Redirect to="/home" push />;
+            }} />
+
+            <Route exact path="/home" render={() => {
+              return <HomePage />;
+            }} />
+
+            {/* {data.map((project, index) => {
+              return (
+                <Route exact path={"/projects/" + project.slug} render={() => (
+                  <div/>
+                )} />
+              )
+            })} */}
+
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    )
+  }
 }
 
 export default App;

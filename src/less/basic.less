@@ -1,0 +1,227 @@
+html,
+body {
+    overflow: hidden;
+    margin: 0%
+}
+
+// Constants
+@spacing: 8px;
+@nav-container-width: 60vw;
+@body-container-width: 60vw;
+@scheduler-container-width: 60vw;
+
+// Colors
+@white: #fff;
+@grey_1: rgb(248, 247, 247);
+@grey_2: #c5c4c4;
+@green:  rgb(169, 181, 159);
+@brown: rgb(107, 100, 95);
+@black: #171d20;
+// Theme
+@background: @brown;;
+@color-base: @green;
+@color-complement: spin(@color-base, 180);
+
+
+// Fonts
+@font-face {
+  font-family: 'my-font';
+  src: local('my-font'), url('../assets/fonts/NunitoSans-SemiBold.ttf') format('truetype');
+}
+
+.font-A1 {
+  font-family: 'my-font';
+  font-size: 1.8vw;
+  line-height: @spacing * 3;
+}
+
+.font-A2 {
+  font-family: 'my-font';
+  font-size: 1.5vw;
+  line-height: @spacing * 2;
+}
+
+.font-A3 {
+  font-family: 'my-font';
+  font-size: 1vw;
+  line-height: @spacing * 2; 
+
+}
+
+.font-P {
+  font-family: 'my-font';
+  font-size: .8vw;
+  line-height: @spacing; 
+}
+
+.font-small {
+  font-family: 'my-font';
+  font-size: .75vw;
+  line-height: @spacing; 
+}
+
+
+// Global Styles
+
+::selection {
+  color: #fff;
+  background:@green;
+}
+
+.text-container {
+  background-color: @white;
+  padding-right: @spacing * 4;
+  padding-left: @spacing * 4;
+  padding-top: @spacing ;
+  padding-bottom: @spacing ;
+  border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *::after,
+// *::before {
+//   content: '';
+// }
+
+// *,
+// *::after,
+// *::before {
+//   box-sizing: border-box;
+// }
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
+// html,
+// body {
+//   background-color: #efefef;
+//   position: relative;
+//   .font-brand1;
+//   margin: 0;
+//   padding: 0;
+//   font-size: 14px;
+//   //   .mq-screen-md-min({
+//   //       font-size: 16px;
+//   //   });
+//   /*height: 100%;
+//       overflow: hidden;*/
+// }
+
+// /*#root {
+//       position: absolute;
+//       top: 0;
+//       bottom: 0;
+//       left: 0;
+//       right: 0;
+//       overflow: auto;
+//   }*/
+
+// a {
+//   text-decoration: none;
+//   .font-brand1;
+
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
+
+// .transition {
+//   opacity: 0;
+//   // transition: @allTransition; 
+// }
+
+// .hide-view {
+//   opacity: 0;
+// }
+
+// .show-view {
+//   opacity: 1;
+// }
+
+// *::after,
+// *::before {
+//   content: '';
+// }
+
+// .stripe-xl {
+//   padding: 7rem 0;
+//   // .mq-screen-md-min({
+//   //     padding: 5rem 0;
+//   // });
+// }
+
+// .stripe-lrg {
+//   padding: 3rem 0;
+//   // .mq-screen-md-min({
+//   //     padding: 4rem 0;
+//   // });
+// }
+
+// .stripe-med {
+//   padding: 1rem 0;
+//   // .mq-screen-md-min({
+//   //     padding: 2rem 0;
+//   // });
+// }
+
+// .stripe-sml {
+//   padding: 0.6rem 0;
+//   // .mq-screen-md-min({
+//   //     padding: 1.2rem 0;
+//   // });
+// }
+
+// .inner-lrg {
+//   padding: 2rem;
+//   // .mq-screen-md-min({
+//   //     padding: 3rem;
+//   // });
+// }
+
+// .inner-med {
+//   padding: 2rem;
+//   // .mq-screen-md-min({
+//   //     padding: 1rem;
+//   // });
+// }
+
+// .inner-sml {
+//   padding: 1.4rem;
+//   // .mq-screen-md-min({
+//   //     padding: 0.8rem;
+//   // });
+// }
+
+// .inner-ex-sml {
+//   padding: 1rem;
+//   // .mq-screen-md-min({
+//   //     padding: 0.5rem;
+//   // });
+// }
+
+// .bottom-lrg {
+//   margin-bottom: 4rem;
+// }
+
+// .bottom-med {
+//   margin-bottom: 2.4rem;
+// }
+
+// .bottom-sml {
+//   margin-bottom: 1rem;
+// }

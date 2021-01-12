@@ -1,0 +1,129 @@
+.home {
+    flex-direction: row;
+    display: flex;
+}
+
+.nav-container {
+    height: 100vh;
+    width: 5vw;
+    background-color: @brown;
+
+}
+
+
+.body-container {
+    height: 100vh;
+    width: @body-container-width;
+    background-color: @grey_1;
+    // padding
+    padding-left: @spacing * 4;
+    padding-right: @spacing * 4;
+    padding-top: @spacing * 3;
+    padding-bottom: @spacing * 3;
+
+    img {
+        width: 15vw;
+        margin-left: @spacing * 4;
+    }
+
+    ;
+
+    .greeting {
+        margin-top: @spacing * 3;
+        margin-bottom: @spacing * 4;
+
+        .text-container;
+
+        h1 {
+            .font-A1;
+            color: @black;
+        }
+
+        h2 {
+            .font-A3;
+            color: @grey_2
+        }
+    }
+
+    ;
+
+    .appointments {
+        .scroller {
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        ;
+
+        .header {
+            margin-top: @spacing * 2;
+            margin-bottom: @spacing * 2;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 25px;
+            .flex {
+                display: flex;
+                width: @body-container-width / 5;
+                margin: 8px;
+                justify-content: center;
+                align-items: center;
+                p {
+                    .font-A3;
+                    color: @grey_2;
+                };
+            }
+        }
+        
+
+        .scroll-item {
+            margin-top: @spacing * 2;
+            margin-bottom: @spacing * 2;
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 25px;
+            background-color: @white;
+
+            
+
+            .flex {
+                display: flex;
+                width: @body-container-width / 5;
+                margin: 8px;
+                justify-content: center;
+                align-items: center;
+                
+                p {
+                    .font-A3;
+                    color: @grey_2;
+                }
+    
+                ;
+    
+                img {
+                    width: 1.5vw;
+                   
+                }
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        h1 {
+            .font-A1;
+            color: @black;
+            margin-left: @spacing * 3;
+        }
+    }
+
+}
+
+.scheduler-container {
+    height: 100vh;
+    width: 35vw;
+    background-color: @white;
+}
